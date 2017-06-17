@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<style>
+body { margin-top:20px;
+background-color: #f0f1f1;
+}
+.panel-title {display: inline;font-weight: bold;}
+.checkbox.pull-right { margin: 0; }
+.pl-ziro { padding-left: 0px; }
+
+
+.btn {
+  background-color: #8587f7;
+}
+.btn:hover{
+  background-color: #8587f7;
+  opacity: 80%
+}
+
+.nasd {
+  background-color: #8587f7;
+}
+
+.nasd:hover {
+  background-color: #8587f7;
+  opacity: 80%;
+}
+.navbar-inner{
+    /*height: 90px*/
+    min-height: 60px
+    }
+.navbar .brand{
+    padding: 0 10px;
+}
+.navbar .nav > li > a {
+    padding: 20px 15px;
+    /*padding: 35px 15px;*/
+}
+.navbar .btn-navbar {
+    /*margin-right: 0px;*/
+    margin-top:15px;
+}
+.brand img{
+    margin-top: 5px
+}
+@media (max-width:768px) {
+    .brand img{
+        margin-bottom: 5px
+    }
+    .navbar .btn-navbar{
+        /*margin-right: -15px;*/
+    }
+    .navbar .nav > li > a {
+        padding: 10px 15px;
+    }
+}
+#map2895e873b4804a83af080afb264babc4 {
+  height:100%;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+  <img src="" alt="" style="widht: 100%; height: 100px">
+    <div class="row">
+        <div class="row">
+          <div class="col-md-9">
+
+
+              <img src="0.png" style="width: 790px" alt="">
+            </div>
+
+
+            <div class="col-xs-12 col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-heading text-center">
+                          <h4>Review Order</h4>
+                      </div>
+                      <div class="panel-body">
+                              <div class="col-md-12">
+                                  <strong>Bus stop C </strong>
+                                  <div class="pull-right"><span>$</span><span>1200.00</span></div>
+                              </div>
+                              <div class="col-md-12">
+                                  <strong>Bus stop FG</strong>
+                                  <div class="pull-right"><span>$</span><span>1200.00</span></div>
+                              </div>
+                              <div class="col-md-12">
+                                  <small></small>
+                                  <div class="pull-right"><span>-</span></div>
+                                  <hr>
+                              </div>
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Payment Details
+                    </h3>
+                    <div class="checkbox pull-right">
+                        <label>
+                            <input type="checkbox" />
+                            Remember
+                        </label>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form role="form">
+                    <div class="form-group">
+                        <label for="cardNumber">
+                            CARD NUMBER</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                                required autofocus />
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                        </div>
+                    </div>
+                      <!-- Name -->
+          <div class="control-group">
+            <label class="control-label"  for="username">CARD HOLDER'S NAME</label>
+            <div class="controls">
+                 <input type="text" class="form-control" id="cardNumber" placeholder=""
+                                required  />
+            </div>
+          </div>
+                    <div class="row">
+                        <div class="col-xs-7 col-md-7">
+                            <div class="form-group">
+                                <label for="expityMonth">
+                                    EXPIRY DATE</label>
+                                <div class="col-xs-6 col-lg-6 pl-ziro">
+                                    <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
+                                </div>
+                                <div class="col-xs-6 col-lg-6 pl-ziro">
+                                    <input type="text" class="form-control" id="expityYear" placeholder="YY" required /></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 col-md-5 pull-right">
+                            <div class="form-group">
+                                <label for="cvCode">
+                                    CVV2</label>
+                                <input type="password" class="form-control" id="cvCode" placeholder="CVV2" required />
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active nasd"><a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-gbp"></span>4200</span> Invoice Total</a>
+                </li>
+            </ul>
+            <br/>
+            <a href="#" class="btn btn-success btn-lg btn-block btn-d" role="button">Pay</a>
+        </div>
+    </div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script text="text/javascript">
+var map = L.map('map2895e873b4804a83af080afb264babc4');
+L.tileLayer(
+  "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  {maxZoom:19, attribution: '<a href="https://github.com/jwass/mplleaflet">mplleaflet</a> | Map data (c) <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'}).addTo(map);
+var gjData = {"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.13538, 51.516118]}, "properties": {"html": "<svg width=\"19px\" height=\"19px\" viewBox=\"-9.5 -9.5 19.0 19.0\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">  <path d=\"M 0.0 7.57782596252 C 2.00966293652 7.57782596252 3.93728583444 6.77937841506 5.35833212475 5.35833212475 C 6.77937841506 3.93728583444 7.57782596252 2.00966293652 7.57782596252 -0.0 C 7.57782596252 -2.00966293652 6.77937841506 -3.93728583444 5.35833212475 -5.35833212475 C 3.93728583444 -6.77937841506 2.00966293652 -7.57782596252 0.0 -7.57782596252 C -2.00966293652 -7.57782596252 -3.93728583444 -6.77937841506 -5.35833212475 -5.35833212475 C -6.77937841506 -3.93728583444 -7.57782596252 -2.00966293652 -7.57782596252 -0.0 C -7.57782596252 2.00966293652 -6.77937841506 3.93728583444 -5.35833212475 5.35833212475 C -3.93728583444 6.77937841506 -2.00966293652 7.57782596252 0.0 7.57782596252 Z\" stroke=\"#1F77B4\" stroke-width=\"1.0\" stroke-opacity=\"0.5\" fill=\"#1F77B4\" fill-opacity=\"0.5\" /></svg>", "anchor_x": 9.5, "anchor_y": 9.5}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.135417, 51.515921]}, "properties": {"html": "<svg width=\"24px\" height=\"24px\" viewBox=\"-12.0 -12.0 24.0 24.0\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">  <path d=\"M 0.0 9.27287367679 C 2.45919484499 9.27287367679 4.81799850679 8.29582520909 6.55691185794 6.55691185794 C 8.29582520909 4.81799850679 9.27287367679 2.45919484499 9.27287367679 -0.0 C 9.27287367679 -2.45919484499 8.29582520909 -4.81799850679 6.55691185794 -6.55691185794 C 4.81799850679 -8.29582520909 2.45919484499 -9.27287367679 0.0 -9.27287367679 C -2.45919484499 -9.27287367679 -4.81799850679 -8.29582520909 -6.55691185794 -6.55691185794 C -8.29582520909 -4.81799850679 -9.27287367679 -2.45919484499 -9.27287367679 -0.0 C -9.27287367679 2.45919484499 -8.29582520909 4.81799850679 -6.55691185794 6.55691185794 C -4.81799850679 8.29582520909 -2.45919484499 9.27287367679 0.0 9.27287367679 Z\" stroke=\"#1F77B4\" stroke-width=\"1.0\" stroke-opacity=\"0.5\" fill=\"#1F77B4\" fill-opacity=\"0.5\" /></svg>", "anchor_x": 12.0, "anchor_y": 12.0}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.13641, 51.515955]}, "properties": {"html": "<svg width=\"38px\" height=\"38px\" viewBox=\"-19.0 -19.0 38.0 38.0\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">  <path d=\"M 0.0 14.9124159268 C 3.95481893227 14.9124159268 7.74819114033 13.3411497111 10.5446704257 10.5446704257 C 13.3411497111 7.74819114033 14.9124159268 3.95481893227 14.9124159268 -0.0 C 14.9124159268 -3.95481893227 13.3411497111 -7.74819114033 10.5446704257 -10.5446704257 C 7.74819114033 -13.3411497111 3.95481893227 -14.9124159268 0.0 -14.9124159268 C -3.95481893227 -14.9124159268 -7.74819114033 -13.3411497111 -10.5446704257 -10.5446704257 C -13.3411497111 -7.74819114033 -14.9124159268 -3.95481893227 -14.9124159268 -0.0 C -14.9124159268 3.95481893227 -13.3411497111 7.74819114033 -10.5446704257 10.5446704257 C -7.74819114033 13.3411497111 -3.95481893227 14.9124159268 0.0 14.9124159268 Z\" stroke=\"#1F77B4\" stroke-width=\"1.0\" stroke-opacity=\"0.5\" fill=\"#1F77B4\" fill-opacity=\"0.5\" /></svg>", "anchor_x": 19.0, "anchor_y": 19.0}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.13646, 51.515812]}, "properties": {"html": "<svg width=\"20px\" height=\"20px\" viewBox=\"-10.0 -10.0 20.0 20.0\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">  <path d=\"M 0.0 7.87306874678 C 2.08796223816 7.87306874678 4.09068804213 7.04351255706 5.5671002996 5.5671002996 C 7.04351255706 4.09068804213 7.87306874678 2.08796223816 7.87306874678 -0.0 C 7.87306874678 -2.08796223816 7.04351255706 -4.09068804213 5.5671002996 -5.5671002996 C 4.09068804213 -7.04351255706 2.08796223816 -7.87306874678 0.0 -7.87306874678 C -2.08796223816 -7.87306874678 -4.09068804213 -7.04351255706 -5.5671002996 -5.5671002996 C -7.04351255706 -4.09068804213 -7.87306874678 -2.08796223816 -7.87306874678 -0.0 C -7.87306874678 2.08796223816 -7.04351255706 4.09068804213 -5.5671002996 5.5671002996 C -4.09068804213 7.04351255706 -2.08796223816 7.87306874678 0.0 7.87306874678 Z\" stroke=\"#1F77B4\" stroke-width=\"1.0\" stroke-opacity=\"0.5\" fill=\"#1F77B4\" fill-opacity=\"0.5\" /></svg>", "anchor_x": 10.0, "anchor_y": 10.0}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.132277, 51.51624]}, "properties": {"html": "<svg width=\"13px\" height=\"13px\" viewBox=\"-6.5 -6.5 13.0 13.0\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">  <path d=\"M 0.0 4.98710803293 C 1.32259651037 4.98710803293 2.59120094734 4.46163486985 3.52641790859 3.52641790859 C 4.46163486985 2.59120094734 4.98710803293 1.32259651037 4.98710803293 -0.0 C 4.98710803293 -1.32259651037 4.46163486985 -2.59120094734 3.52641790859 -3.52641790859 C 2.59120094734 -4.46163486985 1.32259651037 -4.98710803293 0.0 -4.98710803293 C -1.32259651037 -4.98710803293 -2.59120094734 -4.46163486985 -3.52641790859 -3.52641790859 C -4.46163486985 -2.59120094734 -4.98710803293 -1.32259651037 -4.98710803293 -0.0 C -4.98710803293 1.32259651037 -4.46163486985 2.59120094734 -3.52641790859 3.52641790859 C -2.59120094734 4.46163486985 -1.32259651037 4.98710803293 0.0 4.98710803293 Z\" stroke=\"#1F77B4\" stroke-width=\"1.0\" stroke-opacity=\"0.5\" fill=\"#1F77B4\" fill-opacity=\"0.5\" /></svg>", "anchor_x": 6.5, "anchor_y": 6.5}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.135345, 51.516225]}, "properties": {"html": "<svg width=\"884px\" height=\"884px\" viewBox=\"-442.0 -442.0 884.0 884.0\" xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">  <path d=\"M 0.0 353.553390593 C 93.7634552008 353.553390593 183.699225 316.300775 250.0 250.0 C 316.300775 183.699225 353.553390593 93.7634552008 353.553390593 -0.0 C 353.553390593 -93.7634552008 316.300775 -183.699225 250.0 -250.0 C 183.699225 -316.300775 93.7634552008 -353.553390593 0.0 -353.553390593 C -93.7634552008 -353.553390593 -183.699225 -316.300775 -250.0 -250.0 C -316.300775 -183.699225 -353.553390593 -93.7634552008 -353.553390593 -0.0 C -353.553390593 93.7634552008 -316.300775 183.699225 -250.0 250.0 C -183.699225 316.300775 -93.7634552008 353.553390593 0.0 353.553390593 Z\" stroke=\"#FF0000\" stroke-width=\"1.0\" stroke-opacity=\"0.3\" fill=\"#FF0000\" fill-opacity=\"0.3\" /></svg>", "anchor_x": 442.0, "anchor_y": 442.0}}]};
+
+if (gjData.features.length != 0) {
+  var gj = L.geoJson(gjData, {
+    style: function (feature) {
+      return feature.properties;
+    },
+    pointToLayer: function (feature, latlng) {
+      var icon = L.divIcon({'html': feature.properties.html,
+        iconAnchor: [feature.properties.anchor_x,
+                     feature.properties.anchor_y],
+          className: 'empty'});  // What can I do about empty?
+      return L.marker(latlng, {icon: icon});
+    }
+  });
+  gj.addTo(map);
+
+  map.fitBounds(gj.getBounds());
+} else {
+  map.setView([0, 0], 1);
+}
+</script>
+
+</body>
+</html>
